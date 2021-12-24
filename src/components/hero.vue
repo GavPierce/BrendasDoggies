@@ -1,0 +1,65 @@
+<template>
+  <div class="hero-wrapper">
+    <h1 class="hero-text">
+      Keeping your best friend healthy and happy until you come pick him up
+    </h1>
+    <h3 class="hero-subtext">Discover what breeds Brenda has available now</h3>
+    <div class="hero-button">See Available Doggies</div>
+    <div class="tennis-ball"><img src="../assets/tennisball.svg" alt="" /></div>
+  </div>
+</template>
+<script setup lang="ts"></script>
+<style scoped>
+.hero-wrapper {
+  height: 70vh;
+  margin-top: 0;
+  background: #6ac0ba;
+  border-radius: 0 0 20% 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-text {
+  color: white;
+  font-size: xx-large;
+  line-height: 50px;
+}
+.hero-subtext {
+  color: white;
+  font-weight: 400;
+  position: relative;
+  z-index: 2;
+}
+.hero-button {
+  padding: 15px 15px;
+  background-color: #ffcf00;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.hero-button:hover {
+  cursor: pointer;
+}
+.tennis-ball {
+  position: absolute;
+  bottom: 45%;
+  right: 30%;
+  width: 5em;
+  animation-name: bounce;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: rotate(-180deg) translate(-200px, 0);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+</style>
