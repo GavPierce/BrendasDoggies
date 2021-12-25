@@ -21,6 +21,7 @@
   border-radius: 0 0 20% 20%;
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: center;
   justify-content: center;
   overflow: hidden;
