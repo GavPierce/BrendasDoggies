@@ -4,7 +4,10 @@
       Keeping your best friend healthy and happy until you come pick him up
     </h1>
     <h3 class="hero-subtext">Discover what breeds Brenda has available now</h3>
-    <div class="hero-button">See Available Doggies</div>
+    <a href="#dogs" style="text-decoration: none; color: black">
+      <div class="hero-button">See Available Doggies</div></a
+    >
+
     <div class="tennis-ball"><img src="../assets/tennisball.svg" alt="" /></div>
   </div>
 </template>
@@ -14,6 +17,7 @@
   height: 70vh;
   margin-top: 0;
   background: #6ac0ba;
+  padding: 2em;
   border-radius: 0 0 20% 20%;
   display: flex;
   flex-direction: column;
@@ -25,6 +29,7 @@
   color: white;
   font-size: xx-large;
   line-height: 50px;
+  z-index: 3;
 }
 .hero-subtext {
   color: white;
@@ -45,6 +50,7 @@
   position: absolute;
   bottom: 45%;
   right: 30%;
+  z-index: 0;
   width: 5em;
   animation-name: bounce;
   animation-duration: 6s;

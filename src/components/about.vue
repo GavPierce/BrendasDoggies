@@ -1,5 +1,5 @@
 <template>
-  <div class="about-wrapper">
+  <div class="about-wrapper" id="about">
     <div style="color: #6ac0ba">About Brenda</div>
     <div class="about-wrapper-title">
       Brenda
@@ -45,15 +45,22 @@
   background-color: #6ac0ba;
 }
 .about-text {
-  width: 20%;
+  width: 50%;
   margin: 0 auto;
   text-align: center;
   line-height: 25px;
   padding: 1em;
-  background-color: transparent;
   border-radius: 7px;
   border: #ffcf00 1px solid;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  -webkit-backdrop-filter: blur(8px); /* Safari 9+ */
+  backdrop-filter: blur(8px); /* Chrome and Opera */
+  box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.496);
+}
+@media only screen and (max-width: 600px) {
+  .about-text {
+    width: 100%;
+    z-index: 3;
+    position: relative;
+  }
 }
 </style>

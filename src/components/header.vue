@@ -2,9 +2,8 @@
   <div class="header">
     <div class="logo-text"><a href="#">Brenda's Doggies</a></div>
     <div class="menu">
-      <a href="#">How it works</a>
-      <a href="#">Our Doggies</a>
-      <a href="#">About Brenda</a>
+      <a href="#dogs">Our Doggies</a>
+      <a href="#about">About Brenda</a>
     </div>
   </div>
 </template>
@@ -17,7 +16,7 @@
   justify-content: space-around;
   top: 0;
   background-color: #6ac0ba;
-
+  z-index: 99;
   border-radius: 0;
 }
 .logo-text a {

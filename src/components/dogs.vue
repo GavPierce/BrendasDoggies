@@ -1,5 +1,5 @@
 <template>
-  <div class="dogs-wrapper">
+  <div class="dogs-wrapper" id="dogs">
     <div class="title">Available Puppies</div>
     <div class="parent-wrapper">
       <div class="parent">
@@ -28,7 +28,9 @@
           <div class="card-stats-text">Days Old</div>
         </div>
       </div>
-      <div class="card-action">Buy Now</div>
+      <a href="#contact" style="text-decoration: none">
+        <div class="card-action">Buy Now</div>
+      </a>
     </div>
   </div>
 </template>
@@ -50,7 +52,7 @@ const calculatDaysOld = computed(() => {
   border-radius: 20%;
 }
 .title {
-  padding: 4em;
+  padding: 2em 0 0 0;
   font-family: "Mukta", sans-serif;
   font-weight: bold;
   color: black;
@@ -69,14 +71,14 @@ const calculatDaysOld = computed(() => {
 }
 .parent-sex-dad {
   background-color: #ffcf00;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   border-radius: 15px 0;
   letter-spacing: 3px;
 }
 .parent-sex-mom {
   letter-spacing: 3px;
   background-color: #6ac0ba;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   border-radius: 0 15px;
 }
 
@@ -113,9 +115,8 @@ const calculatDaysOld = computed(() => {
   color: black;
 }
 .litter-card {
+  margin: auto;
   transition: transform 0.2s; /* Animation */
-
-  margin: -20px auto;
   justify-content: center;
   align-items: center;
   width: 20em;
@@ -171,5 +172,11 @@ const calculatDaysOld = computed(() => {
 }
 .litter-card:hover {
   transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+  .parent-sex-mom {
+    margin-top: 2em;
+  }
 }
 </style>

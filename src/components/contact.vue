@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-wrapper">
+  <div class="contact-wrapper" id="contact">
     <div class="contact-title">Let's get you your puppy.</div>
     <div class="contact-subtitle">
       To buy a puppy or to find out more information please contact Brenda at:
