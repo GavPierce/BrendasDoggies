@@ -27,8 +27,9 @@
 }
 .hero-text {
   color: white;
-  font-size: xx-large;
+  font-size: 2.5em;
   line-height: 50px;
+  max-width: 70%;
   z-index: 3;
 }
 .hero-subtext {
@@ -56,7 +57,11 @@
   animation-duration: 6s;
   animation-iteration-count: infinite;
 }
-
+@media only screen and (max-width: 600px) {
+  .hero-wrapper {
+    max-width: 100%;
+  }
+}
 @keyframes bounce {
   0% {
     transform: translate(0px, 0px);

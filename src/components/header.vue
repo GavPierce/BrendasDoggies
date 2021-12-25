@@ -15,12 +15,13 @@
   position: sticky;
   justify-content: space-around;
   top: 0;
-  background-color: #6ac0ba;
+  background-color: white;
   z-index: 99;
   border-radius: 0;
 }
 .logo-text a {
-  color: white;
+  color: #6ac0ba;
+
   font-size: xx-large;
   text-decoration: none;
   font-family: "Pushster", cursive;
@@ -36,7 +37,8 @@
   justify-content: space-around;
 }
 .menu a {
-  color: white;
+  color: #6ac0ba;
+
   font-size: 1.3em;
   text-decoration: none;
 }

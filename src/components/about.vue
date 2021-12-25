@@ -24,6 +24,7 @@
   border-radius: 10%;
   overflow: hidden;
   padding: 5em;
+  position: relative;
   overflow: hidden;
 }
 .about-wrapper-title {
@@ -40,14 +41,16 @@
   height: 50vw;
   position: absolute;
   z-index: 1;
-  left: -25vw;
+  left: 0;
   border-radius: 50%;
   background-color: #6ac0ba;
 }
 .about-text {
   width: 50%;
   margin: 0 auto;
+  position: relative;
   text-align: center;
+  z-index: 3;
   line-height: 25px;
   padding: 1em;
   border-radius: 7px;
@@ -59,8 +62,6 @@
 @media only screen and (max-width: 600px) {
   .about-text {
     width: 100%;
-    z-index: 3;
-    position: relative;
   }
 }
 </style>
