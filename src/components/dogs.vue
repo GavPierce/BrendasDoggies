@@ -18,6 +18,9 @@
       <div class="icon"><img src="../assets/puppyIcon.png" alt="" /></div>
       <div class="card-name">Bull Healers</div>
       <div class="card-subname">American Bulldog x Blue Healer</div>
+      <div class="card-view-pics" @click="showPuppies = !showPuppies">
+        View Pics
+      </div>
       <div class="card-stats">
         <div class="puppies-left">
           <div class="card-stats-number">8</div>
@@ -33,19 +36,60 @@
       </a>
     </div>
   </div>
+  <div class="img-wrapper" v-if="showPuppies">
+    <div class="close-img" @click="showPuppies = false">X</div>
+    <vueper-slides fixed-height="90vh">
+      <vueper-slide
+        v-for="(slide, i) in slides"
+        :key="i"
+        :title="slide.title"
+        :image="slide.image"
+      />
+    </vueper-slides>
+  </div>
 </template>
-<script setup lang="ts">
+<script setup>
 import { ref, computed, onMounted } from "vue";
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
+let showPuppies = ref(false);
+let imgSrc = ref("../assets/puppy-1.jpg");
+let slides = ref([
+  {
+    title: '<b style="font-size: 1.3em;color: white">Male</b>',
+    image: `/src/assets/puppy-1.jpg`,
+  },
+  {
+    title: '<b style="font-size: 1.3em;color: white">Female</b>',
+    image: `/src/assets/puppy-5.jpg`,
+  },
+  {
+    title: '<b style="font-size: 1.3em;color: white">Male</b>',
+    image: `/src/assets/puppy-2.jpeg`,
+  },
+  {
+    title: '<b style="font-size: 1.3em;color: white">Male</b>',
+    image: `/src/assets/puppy-3.jpeg`,
+  },
+  {
+    title: '<b style="font-size: 1.3em;color: white">Male</b>',
+    image: `/src/assets/puppy-4.jpg`,
+  },
+]);
+
 let dateOfBirth = Date.parse("2021-12-19");
 let todaysDate = Date.now();
 let daysOld = ref(1);
+
 const calculatDaysOld = computed(() => {
   return Math.floor((todaysDate - dateOfBirth) / (1000 * 60 * 60 * 24));
 });
 </script>
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
-
+.vueperslide__title {
+  color: white;
+}
 .dogs-wrapper {
   padding: 2em;
   background: #f9f4ec;
@@ -173,7 +217,33 @@ const calculatDaysOld = computed(() => {
 .litter-card:hover {
   transform: scale(1.1);
 }
-
+.card-view-pics {
+  padding: 0.5em 1em;
+  color: white;
+  font-size: small;
+  margin: auto;
+  cursor: pointer;
+  width: max-content;
+  background-color: #6ac0ba;
+  border-radius: 15px;
+}
+.close-img {
+  font-size: 2em;
+  font-weight: bolder;
+  position: absolute;
+  right: 2em;
+  top: 2em;
+  cursor: pointer;
+  z-index: 100;
+  width: 2em;
+}
+.img-wrapper {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+}
 @media only screen and (max-width: 600px) {
   .parent-sex-mom {
     margin-top: 2em;
