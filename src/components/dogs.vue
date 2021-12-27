@@ -51,29 +51,34 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
 import { VueperSlides, VueperSlide } from "vueperslides";
+import Puppy1 from "../assets/puppy-1.jpg";
+import Puppy2 from "../assets/puppy-2.jpeg";
+import Puppy3 from "../assets/puppy-3.jpeg";
+import Puppy4 from "../assets/puppy-4.jpg";
+import Puppy5 from "../assets/puppy-5.jpg";
+
 import "vueperslides/dist/vueperslides.css";
 let showPuppies = ref(false);
-let imgSrc = ref("../assets/puppy-1.jpg");
 let slides = ref([
   {
     title: '<b style="font-size: 1.3em;color: white">Male</b>',
-    image: `/src/assets/puppy-1.jpg`,
+    image: Puppy1,
   },
   {
     title: '<b style="font-size: 1.3em;color: white">Female</b>',
-    image: `/src/assets/puppy-5.jpg`,
+    image: Puppy5,
   },
   {
     title: '<b style="font-size: 1.3em;color: white">Male</b>',
-    image: `/src/assets/puppy-2.jpeg`,
+    image: Puppy2,
   },
   {
     title: '<b style="font-size: 1.3em;color: white">Male</b>',
-    image: `/src/assets/puppy-3.jpeg`,
+    image: Puppy3,
   },
   {
     title: '<b style="font-size: 1.3em;color: white">Male</b>',
-    image: `/src/assets/puppy-4.jpg`,
+    image: Puppy4,
   },
 ]);
 
