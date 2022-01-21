@@ -23,7 +23,7 @@
       </div>
       <div class="card-stats">
         <div class="puppies-left">
-          <div class="card-stats-number">8</div>
+          <div class="card-stats-number">5</div>
           <div class="card-stats-text">Puppies Left</div>
         </div>
         <div class="days-since-birth">
@@ -51,6 +51,8 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
 import { VueperSlides, VueperSlide } from "vueperslides";
+import Puppy from "../assets/puppy.jpg";
+
 import Puppy1 from "../assets/puppy-1.jpg";
 import Puppy2 from "../assets/puppy-2.jpeg";
 import Puppy3 from "../assets/puppy-3.jpeg";
@@ -60,6 +62,10 @@ import Puppy5 from "../assets/puppy-5.jpg";
 import "vueperslides/dist/vueperslides.css";
 let showPuppies = ref(false);
 let slides = ref([
+  {
+    title: '<b style="font-size: 1.3em;color: white">Male</b>',
+    image: Puppy,
+  },
   {
     title: '<b style="font-size: 1.3em;color: white">Male</b>',
     image: Puppy1,
@@ -239,19 +245,30 @@ const calculatDaysOld = computed(() => {
   right: 2em;
   top: 2em;
   cursor: pointer;
+  color: #ffcf00;
+
   z-index: 100;
   width: 2em;
 }
 .img-wrapper {
   position: fixed;
-  top: 0;
+  top: 2em;
+  left: calc(50% - 15em);
   z-index: 99;
-  width: 100vw;
-  height: 100vh;
+  width: 30em;
+  height: auto;
+  max-width: 100%;
+  border: 3px solid #6ac0ba;
+}
+.img-wrapper img {
+  object-fit: cover;
 }
 @media only screen and (max-width: 600px) {
   .parent-sex-mom {
     margin-top: 2em;
+  }
+  .img-wrapper {
+    left: 0;
   }
 }
 </style>
